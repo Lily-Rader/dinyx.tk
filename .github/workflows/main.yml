@@ -1,0 +1,42 @@
+- nama: Muat naik Artifak Binaan
+  kegunaan: actions/upload-artifact@v3.1.3
+  dengan:
+    # Nama artifak
+    nama: # pilihan, lalai ialah artifak
+    # Fail, direktori atau corak kad bebas yang menerangkan perkara yang hendak dimuat naik
+    laluan:
+    # Tingkah laku yang diingini jika tiada fail ditemui menggunakan laluan yang disediakan.
+Pilihan yang Tersedia:
+  amaran: Keluarkan amaran tetapi jangan gagalkan tindakan itu
+  ralat: Gagal tindakan dengan mesej ralat
+  abaikan: Jangan keluarkan sebarang amaran atau ralat, tindakan itu tidak gagal
+
+    if-no-files-found: # pilihan, lalai diberi amaran
+    # Tempoh selepas artifak itu akan tamat tempoh dalam beberapa hari. 0 bermakna menggunakan pengekalan lalai.
+Minimum 1 hari. Maksimum 90 hari melainkan diubah daripada halaman tetapan repositori.
+
+    pengekalan-hari: # pilihan
+
+- nama: Persediaan persekitaran Node.js
+  kegunaan: actions/setup-node@v3.8.1
+  dengan:
+    # Tetapkan sentiasa-auth dalam npmrc.
+    always-auth: # pilihan, lalai adalah palsu
+    # Versi Spesifikasi versi untuk digunakan. Contoh: 12.x, 10.15.1, >=10.15.0.
+    versi nod: # pilihan
+    # Fail yang mengandungi versi Spec versi untuk digunakan. Contoh: .nvmrc, .node-version, .tool-versions.
+    fail versi nod: # pilihan
+    # Seni bina sasaran untuk digunakan Node. Contoh: x86, x64. Akan menggunakan seni bina sistem secara lalai.
+    seni bina: # pilihan
+    # Tetapkan pilihan ini jika anda mahu tindakan menyemak versi terkini yang tersedia yang memenuhi spesifikasi versi.
+    semak-terkini: # pilihan
+    # Pendaftaran pilihan untuk disediakan untuk pengesahan. Akan menetapkan pendaftaran dalam fail .npmrc dan .yarnrc peringkat projek, dan menyediakan pengesahan untuk membaca masuk daripada env.NODE_AUTH_TOKEN.
+    url pendaftaran: # pilihan
+    # Skop pilihan untuk mengesahkan terhadap pendaftaran berskop. Akan kembali kepada pemilik repositori apabila menggunakan pendaftaran Pakej GitHub (https://npm.pkg.github.com/).
+    skop: # pilihan
+    # Digunakan untuk menarik pengagihan nod daripada versi nod. Oleh kerana terdapat lalai, ini biasanya tidak dibekalkan oleh pengguna. Apabila menjalankan tindakan ini pada github.com, nilai lalai adalah mencukupi. Apabila berjalan pada GHES, anda boleh lulus token akses peribadi untuk github.com jika anda mengalami pengehadan kadar.
+    token: # pilihan, lalai ialah ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Digunakan untuk menentukan pengurus pakej untuk caching dalam direktori lalai. Nilai yang disokong: npm, benang, pnpm.
+    cache: # pilihan
+    # Digunakan untuk menentukan laluan ke fail kebergantungan: package-lock.json, yarn.lock, dsb. Menyokong kad bebas atau senarai nama fail untuk menyimpan berbilang kebergantungan.
+    laluan-pergantungan cache: # pilihan    
