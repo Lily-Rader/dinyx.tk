@@ -1,182 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="./res/icons/style.css" />
-    <link rel="stylesheet" href="./res/file-icons/style.css" />
-    
-    <!-- <script>___subtmpl1</script> -->
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
 
-    <script>
-      (function () {
-        var __testEl = document.createElement('div');
-        var __testChildEl = document.createElement('div');
-        if (__testEl.append) {
-          __testEl.append(__testChildEl);
-          if (__testEl.children.length === 1) {
-            return;
-          }
+    <title>Your Website Is Ready - InfinityFree</title>
 
-          HTMLElement.prototype.append = function () {
-            var argArr = Array.prototype.slice.call(arguments),
-              docFrag = document.createDocumentFragment();
-
-            argArr.forEach(function (argItem) {
-              var isNode = argItem instanceof Node;
-              argItem = isNode
-                ? argItem
-                : document.createTextNode(String(argItem));
-              docFrag.appendChild(argItem);
-            });
-
-            this.appendChild(docFrag);
-          };
-        }
-      })();
-
-      window._regeneratorRuntime = null;
-      function startsWith(string, needle) {
-        return string.indexOf(needle) === 0;
-      }
-
-      // save all touch events added by ace editor so it can be use in src/ade/touchHandler.js
-      var __oldAddEventListener = HTMLElement.prototype.addEventListener;
-      HTMLElement.prototype.addEventListener = function (
-        type,
-        listener,
-        useCapture,
-        allowed
-      ) {
-        if (typeof useCapture === 'boolean') {
-          allowed = useCapture;
-          useCapture = undefined;
-        }
-
-        if (allowed) {
-          __oldAddEventListener.call(this, type, listener, useCapture);
-          return;
-        }
-
-        if (
-          this.classList.contains('editor-container') &&
-          startsWith(type, 'touch')
-        ) {
-          if (!this.eventListeners) {
-            this.eventListeners = {};
-          }
-
-          if (!this.eventListeners[type]) {
-            this.eventListeners[type] = [];
-          }
-          this.eventListeners[type].push({
-            listener: listener,
-            useCapture: useCapture,
-          });
-
-          return;
-        }
-        __oldAddEventListener.call(this, type, listener, useCapture);
-      };
-    </script>
-
-    <script src="cordova.js"></script>
-    <script src="./js/emmet-core.js"></script>
-    <script src="./js/ace/ace.js"></script>
-    <script src="./js/ace/ext-beautify.js"></script>
-    <script src="./js/ace/ext-code_lens.js"></script>
-    <script src="./js/ace/ext-emmet.js"></script>
-    <script src="./js/ace/ext-language_tools.js"></script>
-    <script src="./js/ace/ext-themelist.js"></script>
-    <script src="./js/ace/ext-elastic_tabstops_lite.js"></script>
-    <script src="./js/ace/ext-hardwrap.js"></script>
-    <script src="./js/ace/ext-linking.js"></script>
-    <script src="./js/ace/ext-rtl.js"></script>
-    <script src="./js/ace/ext-spellcheck.js"></script>
-    <script src="./js/ace/ext-error_marker.js"></script>
-    <script src="./js/ace/ext-whitespace.js"></script>
-    <script src="./js/ace/ext-static_highlight.js"></script>
-
-    <script>
-      var color = localStorage.getItem('__primary_color');
-      var __bg_color = '#20202c';
-      if (color) {
-        __bg_color = color;
-      }
-
-      document.querySelector(':root').style.cssText =
-        '--bg-color: ' + __bg_color;
-    </script>
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <style>
-      :root {
-        --test-height: 45px;
-      }
+        /*!
 
-      body.loading {
-        position: relative;
-      }
+        =========================================================
+        * Coming Sssoon Page - v1.3.2
+        =========================================================
 
-      body.loading.splash::before {
-        content: attr(data-version);
-        background-image: url('./res/logo/logo.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 180px;
-        background-color: #9999ff;
-        background-color: var(--bg-color);
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 100vw;
-        z-index: 999999;
-        text-align: center;
-        line-height: 150vh;
-        color: rgb(209, 209, 209);
-        letter-spacing: 2.4px;
-        font-size: 1.2rem;
-        font-weight: 600;
-      }
+        * Product Page: https://www.creative-tim.com/product/coming-sssoon-page
+        * Copyright 2017 Creative Tim (http://www.creative-tim.com)
+        * Licensed under MIT (https://github.com/creativetimofficial/coming-sssoon-page/blob/master/LICENSE.md)
 
-      body.loading.splash::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        content: attr(data-small-msg);
-        margin: 15px auto;
-        z-index: 999999;
-        color: rgb(209, 209, 209);
-        font-size: 1rem;
-        width: 90vw;
-        text-align: center;
-      }
+        =========================================================
+
+        * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        */
+
+        body{
+
+        }
+        /*     General overwrite     */
+        a{
+            color: #2C93FF;
+        }
+        a:hover, a:focus {
+            color: #1084FF;
+        }
+        a:focus, a:active,
+        button::-moz-focus-inner,
+        input[type="reset"]::-moz-focus-inner,
+        input[type="button"]::-moz-focus-inner,
+        input[type="submit"]::-moz-focus-inner,
+        select::-moz-focus-inner,
+        input[type="file"] > input[type="button"]::-moz-focus-inner {
+            outline : 0;
+        }
+
+        /*           Typography          */
+
+        p{
+            font-size: 16px;
+            line-height: 1.6180em;
+        }
+
+        .main{
+            background-image: url('https://vpassets.infinityfree.net/welcome2017/background.jpg');
+            background-position: center center;
+            background-size: cover;
+            height: auto;
+            left: 0;
+            min-height: 100%;
+            min-width: 100%;
+            position: absolute;
+            top: 0;
+            width: auto;
+        }
+        .cover{
+            position: fixed;
+            opacity: 1;
+            background-color: rgba(0,0,0,.6);
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .cover.black{
+            background-color: rgba(0,0,0,.6);
+        }
+
+        .logo-container .logo{
+            overflow: hidden;
+            border-radius: 50%;
+            border: 1px solid #333333;
+            width: 60px;
+            float: left;
+        }
+
+        .main .logo{
+            color: #FFFFFF;
+            font-size: 56px;
+            font-weight: 300;
+            position: relative;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
+            margin-top: 150px;
+            z-index: 3;
+        }
+        .main .logo.cursive{
+            font-family: 'Grand Hotel',cursive;
+            font-size: 82px;
+
+        }
+        .main .content{
+            position: relative;
+            z-index: 4;
+        }
+        .main .motto{
+            min-height: 140px;
+        }
+        .main .motto, .main .subscribe .info-text{
+            font-size: 28px;
+            color: #FFFFFF;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
+            text-align: center;
+            margin-top: 50px;
+
+        }
+        .main .subscribe .info-text{
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .footer{
+            position: relative;
+            bottom: 20px;
+            right: 0;
+            width: 100%;
+            color: #AAAAAA;
+            z-index: 4;
+            text-align: right;
+            margin-top: 50px;
+        }
+        .footer a{
+            color: #FFFFFF;
+        }
+
+        @media (min-width:991px){
+            .footer{
+                position: fixed;
+                bottom: 20px;
+            }
+        }
+
     </style>
 
-    <script src="./js/build/main.build.js"></script>
+    <!--     Fonts     -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
 
-        <title>Acode</title>
-<!--styles-->
-<link rel="stylesheet" href="./css/build/14.css">
-<link rel="stylesheet" href="./css/build/477.css">
-<link rel="stylesheet" href="./css/build/53.css">
-<link rel="stylesheet" href="./css/build/673.css">
-<link rel="stylesheet" href="./css/build/about.css">
-<link rel="stylesheet" href="./css/build/customTheme.css">
-<link rel="stylesheet" href="./css/build/donate.css">
-<link rel="stylesheet" href="./css/build/fileBrowser.css">
-<link rel="stylesheet" href="./css/build/main.css">
-<link rel="stylesheet" href="./css/build/plugins.css">
-<link rel="stylesheet" href="./css/build/themeSetting.css">
-<!--styles_end-->
 </head>
 
-  <body class="loading splash" data-version="">
-    <wc-page id="root" class="primary"></wc-page>
-  </body>
+<body>
+<div class="main">
+    <div class="cover black" data-color="black"></div>
+    <div class="container">
+        <h1 class="logo cursive">
+            Let's Make Something Awesome
+        </h1>
+
+        <div class="content">
+            <h4 class="motto">Your account is all set up, it's time to build your website!</h4>
+            <div class="subscribe">
+                <h5 class="info-text">
+                    Not sure where to start? Check the <a href="https://forum.infinityfree.net/docs?topic=49312" target="_blank">Getting Started</a> article on the knowledge base.
+                </h5>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            Proudly powered by <br>
+            <a href="https://infinityfree.net"><img src="https://vpassets.infinityfree.net/welcome2017/logo.png" alt="InfinityFree" height="40px"></a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
 </html>
